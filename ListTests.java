@@ -18,9 +18,26 @@ public class ListTests {
         assertEquals(ans, ans1 ); 
     }
 
+
+    @Test
+    public void testMerge(){
+        List<String> x = new ArrayList<String>(), y = new ArrayList<String>() ;
+        y.add("a"); 
+        y.add("d"); 
+        y.add("z"); 
+        x.add("b"); 
+        x.add("c"); 
+        List<String> ans1 = ListExamples.merge(x, y);
+        ArrayList<String> ans = new ArrayList<>();
+        ans.add("a"); 
+        ans.add("b");
+        ans.add("c");
+        ans.add("d");
+        ans.add("z");
+        assertEquals(ans, ans1);
+
+    }
+
 }
 
 
-  // Returns a new list that has all the elements of the input list for which
-  // the StringChecker returns true, and not the elements that return false, in
-  // the same order they appeared in the input list;
